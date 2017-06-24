@@ -1,0 +1,170 @@
+@charset "utf-8";
+body{ color: #666; background: #ebeff5;}
+/*header*/
+.a_header{ width: 100%; background: #fff;}
+.a_header_t{ width:100%; border-bottom:1px solid #f5f5f5; background: url(../img/a_bg_headert.gif) repeat-x 0 0;}
+.a_tinner{ width:967px; margin: 0 auto; height: 26px; font-size:12px; color: #999;}
+.a_city{ float:left; padding:0 12px 0 18px; line-height:16px; margin:7px 12px 0 4px; border-right:1px solid #eff1f6;}
+.a_city a{ display: inline-block; height:16px; line-height: 16px; padding-right:14px; color:#999;}
+.a_city a:hover{color:#999; text-decoration: none;}
+.a_welcome{ float:left;line-height:16px; margin:7px 0 0 4px;}
+.a_welcome a{ color: #1479d7; text-decoration: none;}
+.a_welcome a:hover{ color: #1479d7; text-decoration: underline;}
+.a_download{ float:right; display: inline-block; height: 26px; line-height:26px; background: #1479d7; color: #fff; padding:0 12px 0 31px;}
+.a_header_b{ width:967px; height:64px; margin: 0 auto; overflow: hidden; }
+.a_header_b h1{ float:left; width: 193px; height: 41px; margin: 13px 0 0 4px;}
+.a_tel{ float:right; margin-top:20px;}
+/*inv*/
+.a_inv{ float:left; padding:20px 0 0 118px;  }
+.a_inv a{ float:left; margin:0 19px;color: #666; font:18px/30px Microsoft Yahei;}
+.a_inv a:hover{ color: #1479d7; border-bottom: 2px solid #1479d7;}
+
+.a_index{ width:967px; margin: 0 auto; padding: 9px 0 6px; font:12px/16px Microsoft Yahei; color: #888;}
+.a_index a{ color: #1479d7;}
+.a_index span{ display: inline-block;}
+
+.a_main{ width:967px; margin: 0 auto; overflow: hidden; background: #fff; border-bottom:1px solid #ddd;}
+.a_left{ float:left; width:300px; padding:20px 11px 20px 11px;}
+
+.leftbox{
+	border: 1px solid #1479D7;
+	border-top: 6px solid #c8d2e5;
+	width:100%;
+	padding: 10px 5px;
+	margin-bottom: 10px;
+}
+.title{
+	height: 36px;
+	font-size: 16px;
+	letter-spacing: 36px;
+}
+.line{
+	font-size: 14px;
+	line-height: 30px;
+	height: 30px;
+}
+.coldark{
+	width: 30%;
+	display: inline-block;
+	height: 30px;
+	float: left;
+}
+.line input{
+	height:24px;
+	border: 1px solid #ccc;
+}
+.line button{
+	background: #e55a55;
+    border-radius: 5px;
+    border: 1px solid #e55a55;
+    height: 24px;
+	line-height: 24px;
+    color: #fff;
+    width:64%;
+}
+.colmint{
+	color: #c8d2e5;
+}
+.colmint:hover{
+	color: blue;
+}
+.overflow{
+	overflow: hidden;
+}
+#logout{
+	background: #e55a55;
+	border-radius: 5px;
+	border: 1px solid #e55a55;
+	height: 28px;
+	color: #fff;
+	width: 100%;
+	display: inline-block;
+	line-height: 30px;
+	text-align: center;
+}
+.out{
+	margin-top: 10px;
+}
+.in{
+	color:#333 ;
+}
+.in:hover{
+	color:blue;
+}
+/*后台*/
+.content{
+	margin: 50px;
+	background:#3c763d;
+	color:#000;
+}
+/*bootstrap*/
+.breadcrumb{
+	margin:20px 0;
+}
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+/*表单*/
+.form{
+	margin-top: 20px;
+}
+/*首页右侧
+*/
+.post{
+	padding: 35px;
+	background: #ffffff;
+	margin-bottom: 35px;
+	position: relative;
+	overflow: hidden;
+}
+.mainleft{
+	padding: 20px 11px 20px 11px;
+}
+.listbox{
+	margin: 25px 0;
+}
+.listbox h1{
+	text-align:center;
+	line-height: 78px;
+}
+.coldefalt{
+	text-align: center;
+}
+.colinfo{
+	color: blue;
+}
+.function{
+	float: left;
+	margin-top: 30px;
+}
+.function a{
+	color: #fff;
+	background: #e55a55;
+	border-radius: 5px;
+	border: 1px solid #e55a55;
+	height: 28px;
+	color: #fff;
+	padding: 5px;
+	display: inline-block;
+}
+.paging {
+	overflow: hidden;
+}
+.paging li{
+	float: left;
+}
+.previous{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.next{
+	width: 20%;
+	float: right;
+	text-align: center;
+}
+.pagw{
+	width:60%;
+	text-align: center;
+}
