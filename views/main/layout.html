@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>模板</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/a_userinfo.css"/>
+    <script src="/public/js/jquery-1.9.1.js"></script>
+    <script src="/public/js/index.js"></script>
+</head>
+<body>
+<div class="a_header">
+    <div class="a_header_t">
+        <div class="a_tinner">
+            <div class="a_city"><a href="#">北京</a></div>
+            <div class="a_welcome">欢迎来到马达贷，<a href="#">请登录</a></div>
+            <a href="#" class="a_download">下载马达贷客户端</a>
+        </div>
+    </div>
+    <div class="a_header_b">
+        <h1></h1>
+        <div class="a_inv">
+            {%if category==''%}
+            <a href="/" class="focus">首页</a>
+            {%else%}
+            <a href="/">首页</a>
+            {%end if%}
+            {% for cate in categories %}
+            {%if category==cate.id%}
+            <a href="/?category={{cate.id}}" class="focus">{{cate.name}}</a>
+            {%else%}
+            <a href="/?category={{cate.id}}">{{cate.name}}</a>
+            {%end if%}
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="a_index">
+    <span>您的位置：</span>
+    <span><a href="#">首页</a></span>
+    <span>&gt;</span>
+    <span>影像</span>
+</div>
+<div class="a_main">
+    <div class="row">
+        <aside class="col-md-4" style="overflow: hidden;float: left;">
+            <div class="a_left">
+                {% if userInfo._id %}
+                <div class="leftbox" id="userInfo">
+                    <div class="title">
+                        <span>用户信息</span>
+                    </div>
+                    <p class="overflow"><span class="coldark username">{{userInfo.username}}</span></p>
+                    {% if userInfo.isAdmin %}
+                    <p class="overflow">
+                        <span class="coldanger info">你好，管理员</span>
+                        <a href="/admin" class="in">进入管理</a>
+                    </p>
+                    {% else %}
+                    <p class="overflow"><span class="coldanger info">你好，欢迎光临博客</span></p>
+                    {% endif %}
+
+                    <p class="overflow out"><span class="coldark logout" ><a href="javascript:;" id="logout">退出</a></span></p>
+                </div>
+                {% else %}
+                <div class="leftbox" id="loginbox">
+                    <div class="title">
+                        <span>登录</span>
+                    </div>
+                    <div class="line">
+                        <span class="coldark">用户名</span>
+                        <input type="text" name="username" />
+                        <em></em>
+                    </div>
+                    <div class="line">
+                        <span class="coldark">密码</span>
+                        <input type="password"  name="password"/>
+                        <em></em>
+                    </div>
+                    <div class="line">
+                        <span class="coldark"></span>
+                        <button>登录</button>
+                    </div>
+                    <p class="textleft">还没注册？<a href="javascript:;" class="colmint">马上注册</a></p>
+                    <p class="textcenter"></p>
+                </div>
+
+                <div class="leftbox" id="registerbox" style="display: none;">
+                    <div class="title">
+                        <span>注册</span>
+                    </div>
+                    <div class="line">
+                        <span class="coldark">用户名</span>
+                        <input type="text" name="username"/>
+                        <em></em>
+                    </div>
+                    <div class="line">
+                        <span class="coldark">密码</span>
+                        <input type="password" name="password"/>
+                        <em></em>
+                    </div>
+                    <div class="line">
+                        <span class="coldark">确认</span>
+                        <input type="password" name="repassword"/>
+                        <em></em>
+                    </div>
+                    <div class="line">
+                        <span class="coldark"></span>
+                        <button>注册</button>
+                    </div>
+                    <p class="textleft">已有账号？<a href="javascript:;" class="colmint">马上登录</a></p>
+                    <p class="textcenter"></p>
+                </div>
+                {% endif %}
+            </div>
+        </aside>
+        <main class="col-md-8" style="float: left;">
+            <div class="mainleft">
+                {%block content%}
+                {%endblock%}
+            </div>
+
+        </main>
+    </div>
+</div>
+</body>
+</html>
+
